@@ -1,4 +1,4 @@
-const createNote = (title, note) => {
+export const createNote = (title, note) => {
   return fetch('http://localhost:7891/api/v1/notes/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -11,7 +11,7 @@ const createNote = (title, note) => {
     });
 };
 
-const getNotes = () => {
+export const getNotes = () => {
   return fetch('http://localhost:7891/api/v1/notes/', {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' }
@@ -22,5 +22,3 @@ const getNotes = () => {
       return json;
     });
 };
-
-export default { createNote, getNotes };
