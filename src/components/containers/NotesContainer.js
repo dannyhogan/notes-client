@@ -24,6 +24,7 @@ class NotesContainer extends Component {
   componentDidMount() {
     getNotes()
       .then(notes => {
+        console.log(notes);
         this.setState({ notes });
       });
   }
