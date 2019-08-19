@@ -4,9 +4,13 @@ import NoteItem from './NoteItem.js';
 
 function NotesDisplay({ notes }) {
 
+  console.log('notes arr', notes);
+
   const noteItems = notes.map(note => {
-    <NoteItem note={note} />;
+    return <NoteItem note={note} />;
   });
+
+  console.log(noteItems);
 
   return (
     <ul>
@@ -15,7 +19,7 @@ function NotesDisplay({ notes }) {
   );
 }
 
-NotesDisplay.PropTypes = {
+NotesDisplay.propTypes = {
   notes: PropTypes.array.isRequired
 };
 
