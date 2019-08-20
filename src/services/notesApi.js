@@ -22,3 +22,14 @@ export const getNotes = () => {
       return json;
     });
 };
+
+export const deleteNote = (id) => {
+  return fetch(`http://localhost:7891/api/v1/notes/${id}`, {
+    method: 'DELETE'
+  })
+    .then(res => ([res.ok, res.json()]))
+    .then(([ok, json]) => {
+      if(!ok) throw 'Unable to delete note';
+      return json;
+    });
+};

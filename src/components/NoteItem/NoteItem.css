@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.NoteItem {
+  display: flex;
+  list-style: none;
+  width: 300px;
+  font-family: 'Roboto';
+  background: rgba(0, 0, 0, 0.349);
+  border-radius: 15px;
+  padding: 0;
+  margin: 10px;
+
+  p {
+    color: gray;
+    margin: 5px;
+    font-weight: bolder;
+  }
+  span {
+    margin: 10px;
+    color: white;
+  }
+}
